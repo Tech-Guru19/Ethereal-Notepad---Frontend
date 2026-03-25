@@ -9,9 +9,14 @@ const SignIn = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [remember, setRemember] = useState(false)
+  const [btnDisabled, setBtnDisabled] = useState(false)
 
     const navigateToSignUp = () =>{
         navigate("/signup")
+    }
+
+    const navigateToConfirmOTP = () =>{
+        navigate("/confirmOTP")
     }
 
     const signIn = () =>{
@@ -25,11 +30,13 @@ const SignIn = () => {
         alert("Please enter your password")
       }
       else{
+        setBtnDisabled(true)
         axios.post("https://ethereal-notepad-backend.onrender.com/singin", {
           email,
           password
         })
         .then((output)=>{
+          setBtnDisabled(false)
           const email = output.data.message.email
           const firstName = output.data.message.firstName
           localStorage.setItem("userCred", JSON.stringify({email, firstName}))
@@ -37,6 +44,7 @@ const SignIn = () => {
           navigate("/dashboard")
         })
         .then((error)=>{
+          setBtnDisabled(false)
           if (error?.response?.data?.message) {
             alert(error?.response?.data?.message)
           }
@@ -66,9 +74,10 @@ const SignIn = () => {
               </div>
               <h5>Forgot Password?</h5>
             </div>
-            <button onClick={signIn}>Sign In</button>
+            {btnDisabled? <button>Loading...</button> : <button onClick={signIn}>Sign In</button>}
+            
             <div className="options">
-                <h6>Don't have an Account <span onClick={navigateToSignUp}>Sign Up</span></h6>
+                <h6>Don't have an Account <span onClick={navigateToSignUp}>Sign Up</span> or <span onClick={navigateToConfirmOTP}>Verify OTP</span></h6>
             </div>
         </div>
     </div>

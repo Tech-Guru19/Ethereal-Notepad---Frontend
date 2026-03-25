@@ -13,12 +13,17 @@ const SignUp = () => {
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const [policy, setPolicy] = useState(false)
+    const [btnDisabled, setBtnDisabled] = useState(false)
     const PasswordUppercase = /[A-Z]{1,}/
     const passwordLowercase = /[a-z]{3,}/
     const passwordNumerals = /[0-9]{2,}/
     const passwordSyntax = /[!@#\$%\^&*_\-+=;(){}'.<>]{1,}/
     const navigateToSignIn = () =>{
         navigate("/signin")
+    }
+
+    const navigateToConfirmOTP = () =>{
+        navigate("/confirmOTP")
     }
 
     const signUpAccount = () =>{
@@ -59,6 +64,7 @@ const SignUp = () => {
             alert("Accept policy to continue")
         }
         else{
+            setBtnDisabled(true)
             axios.post("https://ethereal-notepad-backend.onrender.com/signup",{
                 firstName,
                 lastName,
@@ -67,11 +73,13 @@ const SignUp = () => {
                 password
             })
             .then((output)=>{
+                setBtnDisabled(false)
                 alert("successful")
                 localStorage.setItem("userCred", JSON.stringify({email, firstName}))
                 navigate("/confrimOTP")
             })
             .catch((error)=>{
+                setBtnDisabled(false)
                 alert(error.response.data.message)
             })
         }
@@ -102,9 +110,9 @@ const SignUp = () => {
                 <input type="checkbox" checked={policy} onChange={(e)=>{setPolicy(e.target.checked)}}/>
                 <h6>I agree to the terms of use</h6>
             </div>
-            <button onClick={signUpAccount}>Sign Up</button>
+            {btnDisabled? <button>Loading...</button> :<button onClick={signUpAccount}>Sign Up</button>}
             <div className="options">
-                <h6>Already have an Account <span onClick={navigateToSignIn}>Sign In</span></h6>
+                <h6>Already have an Account <span onClick={navigateToSignIn}>Sign In</span> or <span onClick={navigateToConfirmOTP}>Verify OTP</span></h6>
             </div>
         </div>
     </div>
