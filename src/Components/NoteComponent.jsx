@@ -32,7 +32,7 @@ const NoteComponent = ({cards, setCards, userCred, setUserCred, currentSection, 
             }
             return output
         }))
-        axios.post("https://ethereal-notepad-backend.onrender.com/editNoteValue",{
+        axios.post("https://new-ethereal-bk.onrender.com/editNoteValue",{
             id,
             valueToEdit,
             value
@@ -97,7 +97,7 @@ const NoteComponent = ({cards, setCards, userCred, setUserCred, currentSection, 
     }
 
     const deleteNotePermanently = (output) =>{
-        axios.post("https://ethereal-notepad-backend.onrender.com/deleteNote", {
+        axios.post("https://new-ethereal-bk.onrender.com/deleteNote", {
             id: output?._id
         })
         setCards(cards=>cards.filter(card=> card?._id != output?._id))

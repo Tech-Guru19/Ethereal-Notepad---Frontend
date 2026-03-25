@@ -105,7 +105,7 @@ const EditComponent = ({setEditNote, allCollection, mail, editObj, setCards}) =>
         form.append("collection", collection)
         form.append("background", background)
         form.append("dateCreated", editObj?.dateCreated)
-        axios.post("https://ethereal-notepad-backend.onrender.com/editNote", form, {
+        axios.post("https://new-ethereal-bk.onrender.com/editNote", form, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

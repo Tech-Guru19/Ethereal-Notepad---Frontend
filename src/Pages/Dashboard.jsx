@@ -63,19 +63,19 @@ const Dashboard = () => {
       }
       if (userCred) {
         setChecked(true)
-        axios.post("https://ethereal-notepad-backend.onrender.com/fetchUserCred",{
+        axios.post("https://new-ethereal-bk.onrender.com/fetchUserCred",{
           email: userCred.email
         })
         .then((userResult)=>{
           setUserCred(userResult?.data?.message)          
           if (userResult?.data?.message?.activated) { 
-            axios.post("https://ethereal-notepad-backend.onrender.com/fetchAllNote", {
+            axios.post("https://new-ethereal-bk.onrender.com/fetchAllNote", {
               mail: userCred.email
             })
             .then((output)=>{
               setCards(output?.data?.message || [])              
               setLoading(false)
-              axios.post("https://ethereal-notepad-backend.onrender.com/fetchTags", {
+              axios.post("https://new-ethereal-bk.onrender.com/fetchTags", {
                 mail: userCred.email
               })
               .then((allTags)=>{

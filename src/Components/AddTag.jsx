@@ -14,7 +14,7 @@ const AddTag = ({setAddTagActive, mail, setTags}) => {
     }, [currentColorIndex])
     
     const saveTag = () =>{
-        axios.post("https://ethereal-notepad-backend.onrender.com/addTag",{
+        axios.post("https://new-ethereal-bk.onrender.com/addTag",{
             tagName,
             color,
             mail

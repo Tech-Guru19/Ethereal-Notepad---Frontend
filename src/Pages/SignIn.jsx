@@ -31,7 +31,7 @@ const SignIn = () => {
       }
       else{
         setBtnDisabled(true)
-        axios.post("https://ethereal-notepad-backend.onrender.com/singin", {
+        axios.post("https://new-ethereal-bk.onrender.com/singin", {
           email,
           password
         })

@@ -65,7 +65,7 @@ const SignUp = () => {
         }
         else{
             setBtnDisabled(true)
-            axios.post("https://ethereal-notepad-backend.onrender.com/signup",{
+            axios.post("https://new-ethereal-bk.onrender.com/signup",{
                 firstName,
                 lastName,
                 email,

@@ -108,7 +108,7 @@ const CreateNote = ({setEditNote, allCollection, mail, setCards}) => {
         form.append("collection", collection)
         form.append("background", background)
         form.append("dateCreated", dateCreated)
-        axios.post("https://ethereal-notepad-backend.onrender.com/uploadNote", form, {
+        axios.post("https://new-ethereal-bk.onrender.com/uploadNote", form, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

@@ -42,7 +42,7 @@ const Tag = ({setTagActive, setAddTagActive, tags, setTags, setTagObj, setEditTa
 
   const deleteTag = (id) =>{
     setTags(tags=> tags.filter(tag=> tag?._id != id))
-    axios.post("https://ethereal-notepad-backend.onrender.com/deleteTag", {id})
+    axios.post("https://new-ethereal-bk.onrender.com/deleteTag", {id})
     .then(()=>{
 
     })

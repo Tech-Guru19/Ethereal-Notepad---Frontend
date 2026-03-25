@@ -21,7 +21,7 @@ const EditTag = ({setTagObj, tagObj, mail, setEditTagActive, setTags}) => {
             return tag
         }))
         setEditTagActive(false)
-        axios.post("https://ethereal-notepad-backend.onrender.com/editTag",{
+        axios.post("https://new-ethereal-bk.onrender.com/editTag",{
             _id,
             tagName,
             color,
