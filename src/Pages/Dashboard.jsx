@@ -96,7 +96,7 @@ const Dashboard = () => {
             })
           }
           else{
-            navigate("/confrimOTP")
+            navigate("/confirmOTP")
           }
         })
         .catch((error)=>{
