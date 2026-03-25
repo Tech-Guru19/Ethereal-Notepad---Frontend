@@ -1,0 +1,27 @@
+.dashboard-overall{
+    width: calc(100vw - 40px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0px 20px;
+    position: relative;
+    /* gap: 20px; */
+    /* border: 2px solid red; */
+}
+.dashboard-overall .splash{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(243,246,253);
+}
+.dashboard-overall .splash img{
+   max-width: 250px;
+   width: 95%;
+   top: -15vh;
+}

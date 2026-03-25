@@ -1,0 +1,311 @@
+.create-note-overall{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 320px);
+    padding-right: 20px;
+    gap: 30px;
+    height: 100vh;
+}
+.create-note-overall header{
+    display: flex;
+    gap: 40px;
+}
+.create-note-overall header > div{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.create-note-overall header .write-note{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.create-note-overall header .write-note h1{
+    font-weight: 400;
+    font-size: 25px;
+}
+.create-note-overall .back{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding:5px 10px;
+    border-radius:10px;
+    border: 1px solid black;
+}
+.create-note-overall .back:hover,
+.create-note-overall .back:active,
+.create-note-overall .back:focus{
+    background: black;
+}
+.create-note-overall .back:hover p,
+.create-note-overall .back:active p,
+.create-note-overall .back:focus p{
+    color: white;
+}
+.create-note-overall .back:hover img,
+.create-note-overall .back:active img,
+.create-note-overall .back:focus img{
+    filter: invert(1);
+}
+.create-note-overall .back img{
+    width: 25px;
+    height: 25px;
+}
+.create-note-overall .back p{
+    font-size: 18px;
+    font-weight: 400;
+}
+.create-note-overall header .updates{
+    display: flex;
+    gap: 20px;
+}
+.create-note-overall header .updates img{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background: rgb(243,246,253);
+    border-radius: 10px;
+}
+.create-note-overall section{
+    width: calc(100% - 40px);
+    padding: 20px;
+    height: calc(100% - 200px);
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+    overflow-y: scroll;
+}
+.create-note-overall section .template{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+    padding-top: 30px;
+    gap: 5px;
+    overflow-y: scroll;
+}
+.create-note-overall section .template::-webkit-scrollbar{
+    width: 2px;
+}
+.create-note-overall section .template::-webkit-scrollbar-thumb{
+    background: rgba(20, 20, 32, 0.187);
+}
+.create-note-overall section .template p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.create-note-overall section .template input,
+.create-note-overall section .template textarea,
+.create-note-overall section .template select{
+    width: calc(100% - 30px);
+    padding:10px;
+    background: rgb(243,246,253);
+    border-radius: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.182);
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+.create-note-overall section .template textarea{
+    min-height: 80px !important;
+}
+.create-note-overall section .template select{
+    max-width: 152px;
+}
+.create-note-overall section .template .collection{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.create-note-overall section .template .category-icon{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.create-note-overall section .template .category-icon img{
+    width: 32px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.846);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.create-note-overall section .template .category-icon .selected{
+    background: rgba(255, 255, 255, 0.812);
+    filter: invert(1);
+}
+.create-note-overall section .template .category-icon img:hover,
+.create-note-overall section .template .category-icon img:active,
+.create-note-overall section .template .category-icon img:focus{
+    background: rgba(255, 255, 255, 0.812);
+    filter: invert(1);
+}
+.create-note-overall section .template .last-option{
+    display: flex;
+    gap: 20px;
+}
+.create-note-overall section .template .btn-parent{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+.create-note-overall section .template .btn-parent .save{
+    background: black;
+}
+.create-note-overall section .template .btn-parent .save img{
+    filter: invert(1);
+}
+.create-note-overall section .template .btn-parent .save p{
+    color: white;
+}
+.create-note-overall section .template .last-option .background-parent{
+    display: flex;
+    gap: 8px;
+    margin-top: 3px;
+}
+.create-note-overall section .template .last-option .background-parent .bg{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 5px solid rgba(128, 128, 128, 0.193);
+    cursor: pointer;
+}
+.create-note-overall section .card{
+    width: 100%;
+    max-width: 270px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.108);
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    height: 90%;
+}
+.create-note-overall section .card h1{
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+.create-note-overall section .card .card-options{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    z-index: 2;
+    width: 130px;
+    top: 50px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.109);
+    border-radius: 10px;
+    right: 20px;
+    display: none;
+    padding: 10px 5px;
+}
+.create-note-overall section .card .card-options > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+.create-note-overall section .card .card-options > div:hover{
+    background: rgba(146, 142, 142, 0.312);
+    border-radius: 10px;
+}
+.create-note-overall section .card .card-options > div img{
+    width: 10px;
+    border: none !important;
+    height: 10px;
+}
+.create-note-overall section .card .card-options > div p{
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    filter: opacity(1);
+    font-size: 16px;
+}
+.create-note-overall section .card .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.create-note-overall section .card .head > img{
+    width: 25px;
+    padding: 10px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.create-note-overall section .card .head .other-icon{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.create-note-overall section .card .head .other-icon .option-icon{
+    position: relative;
+    z-index: 3;
+}
+.create-note-overall section .card .head .other-icon img{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.create-note-overall section .card p{
+    font-size: 17px;
+    filter: opacity(.6);
+    height: 80px;
+    overflow: scroll;
+    margin-top: 10px;
+}
+.create-note-overall section .card p::-webkit-scrollbar{
+    width: 2px;
+}
+.create-note-overall section .card p::-webkit-scrollbar-thumb{
+    background: rgba(20, 20, 32, 0.187);
+}
+.create-note-overall section .card .img-parent{
+    border-radius: 10px;
+    height: 200px;
+    width: calc(100% - 30px);
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+}
+.create-note-overall section .card .img-parent img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background: rgba(240, 248, 255, 0.404);
+    border-radius: 10px;
+}
+.create-note-overall section .card .line{
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+}
+.create-note-overall section .card .date-parent{
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 30px);
+    position: absolute;
+    bottom: -15px;
+}
+.create-note-overall section .card .date-parent > div{
+    display: flex;
+    gap: 8px;
+}
+.create-note-overall section .card .date-parent > div img{
+    width: 20px;
+    height: 20px;
+}
+.create-note-overall section .card .date-parent > div p{
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto;
+    font-size: 16px;
+}

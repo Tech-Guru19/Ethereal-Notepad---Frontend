@@ -1,0 +1,186 @@
+.sidemenu-overall{
+    background: rgb(255,255,255);
+    width: 230px;
+    border-radius: 10px;
+    padding: 20px;
+    height: calc(100vh - 90px);
+}
+
+.sidemenu-overall .start{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.155);
+    padding-bottom: 20px;
+}
+.sidemenu-overall .start img{
+    width: 60px;
+    height: 60px;
+}
+.sidemenu-overall .start h3{
+    font-weight: 400;
+    font-size: 21px;
+}
+.sidemenu-overall .profile{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+    align-items: center;
+    cursor: pointer;
+}
+.sidemenu-overall .profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+.sidemenu-overall .profile p{
+    flex: 1;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.sidemenu-overall .profile h5{
+    transform: rotate(90deg);
+    font-weight: 500;
+}
+.sidemenu-overall .search-parent{
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    align-items: center;
+    background: rgb(243,246,253);
+}
+.sidemenu-overall .search-parent img{
+    width: 20px;
+    height: 20px;
+}
+.sidemenu-overall .search-parent input{
+    flex: 1;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+}
+.sidemenu-overall .new-note{
+    display: flex;
+    align-items: center;
+    background: rgb(31,28,47);
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.sidemenu-overall .new-note img{
+    width: 10px;
+    filter: invert(1);
+    height: 10px;
+    margin-right: 20px;
+}
+.sidemenu-overall .new-note p{
+    color: white;
+    flex: 1;
+}
+.sidemenu-overall .new-note h6{
+    width: 42px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    background:rgb(7,6,14);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+    right: 0;
+}
+.sidemenu-overall .list-parent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+.sidemenu-overall .scroll-parent{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - 250px);
+}
+.sidemenu-overall .scroll-parent::-webkit-scrollbar{
+    width: 2px;
+}
+.sidemenu-overall .scroll-parent::-webkit-scrollbar-thumb{
+    background: rgba(20, 20, 32, 0.187);
+}
+.sidemenu-overall .list-parent > div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    filter: opacity(.6);
+    position: relative;
+}
+.sidemenu-overall .list-parent #collection-overall{
+    flex-direction: column;
+    gap: 0px !important;
+}
+.sidemenu-overall .list-parent #collection-overall div{
+    display: flex !important;
+    width: 100%;
+    gap: 10px;
+}
+.sidemenu-overall .list-parent #collection-overall .collections{
+    position: relative;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    border-radius: 10px;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    z-index: 33;
+    filter: none !important;
+    gap: 5px;
+    background: rgb(243,246,253);
+    max-height: 150px;
+    overflow-y: scroll;
+    display: flex;
+    padding: 5px;
+}
+.sidemenu-overall .list-parent #collection-overall .collections::-webkit-scrollbar{
+    width: 2px;
+}
+.sidemenu-overall .list-parent #collection-overall .collections::-webkit-scrollbar-thumb{
+    background: rgba(20, 20, 32, 0.187);
+}
+.sidemenu-overall .list-parent #collection-overall .collections p{
+    border-radius: 10px;
+    padding:5px 10px;
+}
+.sidemenu-overall .list-parent #collection-overall .collections p:hover,
+.sidemenu-overall .list-parent #collection-overall .collections p:active,
+.sidemenu-overall .list-parent #collection-overall .collections p:focus{
+    background: white;
+}
+.sidemenu-overall .list-parent .selected{
+    filter: opacity(1);
+}
+.sidemenu-overall .list-parent > div:hover,
+.sidemenu-overall .list-parent > div:active,
+.sidemenu-overall .list-parent > div:focus{
+    filter: opacity(1);
+}
+.sidemenu-overall .list-parent > div img{
+    width: 20px;
+    height: 20px;
+}
+.sidemenu-overall .list-parent > div p{
+    flex: 1;
+    font-size: 17px;
+}
+.sidemenu-overall .list-parent > div h6{
+    transform: rotate(90deg);
+}

@@ -1,0 +1,243 @@
+.note-overall{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 320px);
+    padding-right: 20px;
+    gap: 30px;
+    height: 100vh;
+}
+.note-overall header{
+    display: flex;
+    gap: 40px;
+}
+.note-overall header > div{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.note-overall header .write-note{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.note-overall header .write-note > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    filter: opacity(.6);
+    cursor: pointer;
+}
+.note-overall header .write-note > div:hover,
+.note-overall header .write-note > div:focus,
+.note-overall header .write-note > div:active{
+    filter: opacity(1);
+}
+.note-overall header .write-note img{
+    width: 15px ;
+    height: 15px;
+}
+.note-overall header .write-note p{
+    font-size: 17px;
+}
+.note-overall header .updates{
+    display: flex;
+    gap: 20px;
+}
+.note-overall header .updates img{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background: rgb(243,246,253);
+    border-radius: 10px;
+}
+.note-overall section{
+    width: calc(100% - 40px);
+    padding: 20px;
+    height: calc(100% - 200px);
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    margin: 0;
+    align-self: flex-start;
+    text-transform: capitalize;
+}
+.note-overall section h1{
+    font-weight: 400;
+    font-size: 27px;
+}
+.note-overall section .options{
+    display: flex;
+    gap: 35px;
+    margin-top: 15px;
+    align-self: flex-start;
+}
+.note-overall section .options p{
+    font-size: 18px;
+    font-weight: 500;
+    filter: opacity(.6);
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+.note-overall section .options p:hover{
+    filter: none;
+    border-bottom: 1px solid black;
+}
+.note-overall section .options .selected{
+    filter: none;
+    border-bottom: 1px solid black;
+}
+.note-overall section .card-parent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    overflow: scroll;
+    height: calc(100vh - 270px);
+    padding-top: 10px;
+    width: 100%;
+}
+.note-overall section .card-parent::-webkit-scrollbar{
+    width: 2px;
+}
+.note-overall section .card-parent::-webkit-scrollbar-thumb{
+    background: rgba(20, 20, 32, 0.187);
+}
+.note-overall section .card-parent .card{
+    width: 100%;
+    max-width: 270px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.108);
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    height: 400px;
+}
+.note-overall section .card-parent .card .card-options{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    z-index: 2;
+    width: 130px;
+    top: 50px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.109);
+    border-radius: 10px;
+    right: 20px;
+    display: none;
+    padding: 10px 5px;
+}
+.note-overall section .card-parent .card .card-options > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+.note-overall section .card-parent .card .card-options > div:hover{
+    background: rgba(146, 142, 142, 0.312);
+    border-radius: 10px;
+}
+.note-overall section .card-parent .card .card-options > div img{
+    width: 10px;
+    border: none !important;
+    height: 10px;
+}
+.note-overall section .card-parent .card .card-options > div p{
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    filter: opacity(1);
+    font-size: 16px;
+}
+.note-overall section .card-parent .card .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.note-overall section .card-parent .card .head > img{
+    width: 25px;
+    padding: 10px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.note-overall section .card-parent .card .head .other-icon{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.note-overall section .card-parent .card .head .other-icon .option-icon{
+    position: relative;
+    z-index: 3;
+}
+.note-overall section .card-parent .card .head .other-icon img{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.note-overall section .card-parent .card > h1{
+    font-size: 22px;
+    margin-top: 20px;
+}
+.note-overall section .card-parent .card p{
+    font-size: 17px;
+    filter: opacity(.6);
+    height: 80px;
+    overflow: scroll;
+    margin-top: 10px;
+}
+.note-overall section .card-parent .card p::-webkit-scrollbar{
+    width: 2px;
+}
+.note-overall section .card-parent .card p::-webkit-scrollbar-thumb{
+    background: rgba(20, 20, 32, 0.187);
+}
+.note-overall section .card-parent .card .img-parent{
+    border-radius: 10px;
+    height: 200px;
+    width: calc(100% - 30px);
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+}
+.note-overall section .card-parent .card .img-parent img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    background: rgba(240, 248, 255, 0.404);
+}
+.note-overall section .card-parent .card .line{
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.note-overall section .card .date-parent{
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 30px);
+    position: absolute;
+    bottom: -12px;
+}
+.note-overall section .card .date-parent > div{
+    display: flex;
+    gap: 8px;
+}
+.note-overall section .card .date-parent > div img{
+    width: 20px;
+    height: 20px;
+}
+.note-overall section .card .date-parent > div p{
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto;
+    font-size: 16px;
+}

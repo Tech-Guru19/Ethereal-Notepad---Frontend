@@ -1,0 +1,118 @@
+.sign-overall{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sign-overall .sign-dialogue{
+    width: 95%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.sign-overall .sign-dialogue .start{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+.sign-overall .sign-dialogue .start img{
+    width: 50px;
+    height: 50px;
+}
+.sign-overall .sign-dialogue > h3{
+    font-weight: 500;
+    font-size: 25px;
+}
+.sign-overall .sign-dialogue .start > h3{
+    font-size: 25px;
+    font-weight: 500;
+}
+.sign-overall .sign-dialogue > h6{
+    font-weight: 400;
+    color: rgb(119,133,147);
+    font-size: 16px;
+    margin: 10px 0px 20px 0px;
+}
+.sign-overall .sign-dialogue .input-parent{
+    display: flex;
+    margin: 10px 0px;
+    gap: 20px;
+    width: 100%;
+}
+.sign-overall .sign-dialogue .input-parent input{
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid rgb(220,221,223);
+    background: rgb(243,246,253);
+    font-size: 15px;
+    color: rgb(90, 99, 111);
+}
+.sign-overall .sign-dialogue .optionsParent{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.sign-overall .sign-dialogue .optionsParent h5{
+    width: 100%;
+    text-align: end;
+    margin: 0;
+}
+.sign-overall .sign-dialogue .policy{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.sign-overall .sign-dialogue .policy h6{
+    font-weight: 400;
+    color: rgb(119,133,147);
+    font-size: 17px;
+}
+.sign-overall .sign-dialogue button{
+    background: rgb(31,28,47);
+    padding: 10px 8px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 10px;
+    color: whitesmoke;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.sign-overall .sign-dialogue .options h6{
+    font-weight: 400;
+    color: rgb(119,133,147);
+    font-size: 17px;
+}
+.sign-overall .sign-dialogue .options h6 span{
+    font-weight: 600;
+    color: rgb(31,28,47);
+    cursor: pointer;
+}
+.sign-overall .sign-dialogue .otpInput{
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    background:  rgb(243,246,253);
+    border: 1px solid rgb(220,221,223);
+    outline: 0;
+    font-weight: 600;
+}
+.sign-overall .sign-dialogue .optionsParent p{
+    color: rgb(103, 103, 230);
+    cursor: pointer;
+}
+.sign-overall .sign-dialogue .optionsParent p:hover{
+    color: rgb(62, 62, 123);
+}

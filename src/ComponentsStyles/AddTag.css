@@ -1,0 +1,81 @@
+.addTag-overall{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: brightness(.5);
+    border: 2px solid red;
+    z-index: 46;
+    left: -10px;
+    top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addTag-overall .add-tag-container{
+    width: 95%;
+    max-width: 450px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+.addTag-overall .add-tag-container h1{
+    font-weight: 400;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.addTag-overall .add-tag-container input{
+    width: calc(100% - 30px);
+    padding:10px;
+    background: rgb(243,246,253);
+    border-radius: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.182);
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+.addTag-overall .add-tag-container .background-parent{
+    display: flex;
+    gap: 8px;
+    margin-top: 7px;
+}
+.addTag-overall .add-tag-container .background-parent .bg{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 5px solid rgba(128, 128, 128, 0.193);
+    cursor: pointer;
+}
+.addTag-overall .add-tag-container .background-parent .bg:hover{
+    border: 5px solid rgba(56, 40, 40, 0.791) !important;
+}
+.addTag-overall .add-tag-container .background-parent .selected{
+    border: 5px solid rgba(56, 40, 40, 0.791) !important;
+}
+.addTag-overall .add-tag-container .btn-parent{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.addTag-overall .add-tag-container .btn-parent button{
+    width: 80px;
+    padding: 8px 0px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid rgba(0, 0, 0, 0.664);
+    outline: 0;
+    background: transparent;
+    cursor: pointer !important;
+}
+.addTag-overall .add-tag-container .btn-parent button:nth-child(1):hover,
+.addTag-overall .add-tag-container .btn-parent button:nth-child(1):active,
+.addTag-overall .add-tag-container .btn-parent button:nth-child(1):focus{
+    background: black;
+    color: white;
+}
+.addTag-overall .add-tag-container .btn-parent button:nth-child(2){
+    background: black;
+    color: white;
+}
