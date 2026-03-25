@@ -40,7 +40,7 @@ const ConfirmOTP = () => {
   }
 
   const resendOTP = () =>{
-    axios.post("https://ethereal-notepad-backend-0q7h.onrender.com/resendOTP", {
+    axios.post("https://new-ethereal-bk.onrender.com/resendOTP", {
       firstName: userCred.firstName,
       email: userCred.email
     })
