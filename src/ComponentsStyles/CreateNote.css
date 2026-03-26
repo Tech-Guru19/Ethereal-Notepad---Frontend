@@ -338,3 +338,8 @@
         
     }
 }
+@media (max-width: 600px) {
+    .create-note-overall header .updates{
+        display: none !important;
+    }
+}
