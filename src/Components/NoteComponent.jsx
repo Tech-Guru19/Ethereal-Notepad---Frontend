@@ -103,8 +103,15 @@ const NoteComponent = ({cards, setCards, userCred, setUserCred, currentSection, 
         setCards(cards=>cards.filter(card=> card?._id != output?._id))
     } 
 
+    const closeMenu = () =>{
+        if (window.innerWidth <= 1244) {
+            alert("here")
+            document.querySelector(".sidemenu-overall").style.display = "none"
+        }
+    }
+
   return (
-    <div className='note-overall'>
+    <div className='note-overall' onClick={closeMenu}>
         <header>
             <div className="write-note">
                 <div onClick={addNote}>

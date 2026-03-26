@@ -10,6 +10,7 @@ import alarmIcon from "../images/alarm.png"
 import tagIcon from "../images/tag.png"
 import binIcon from "../images/recycle-bin.png"
 import archiveIcon from "../images/archive.png"
+import closeIcon from "../images/icon-close.svg"
 
 
 const SideMenu = ({userCred, setUserCred, currentSection, setCurrentSection, setEditNote, allCollection, setCurrentCollection, setTagActive}) => {
@@ -21,12 +22,16 @@ const SideMenu = ({userCred, setUserCred, currentSection, setCurrentSection, set
   const removeCollections = () =>{
     setCollectionOption(false)
   }
+  const closeMenu = () =>{
+    document.querySelector(".sidemenu-overall").style.display = "none"
+  }
 
   return (
     <div className='sidemenu-overall'>
       <div className="start">
         <img src={logo} alt="" />
         <h3>Ethereal NotePad</h3>
+        <img className='menu-close-icon' src={closeIcon} alt="" onClick={closeMenu} />
       </div>
       <div className="profile">
         <img src={profile07} alt="" />
@@ -38,13 +43,13 @@ const SideMenu = ({userCred, setUserCred, currentSection, setCurrentSection, set
           <img src={search} alt="" />
           <input type="text" placeholder='Search'/>
         </div>
-        <div className="new-note" onClick={()=>{setEditNote(true)}}>
+        <div className="new-note" onClick={()=>{setEditNote(true),closeMenu()}}>
           <img src={addIcon} alt="" />
           <p>Add New</p>
           <h6>{">"}</h6>
         </div>
         <div className="list-parent">
-          <div onClick={()=>{setCurrentSection("allNote"), setEditNote(false), removeCollections()}} className={currentSection == "allNote" ? 'selected' : null}>
+          <div onClick={()=>{setCurrentSection("allNote"), setEditNote(false), removeCollections(),closeMenu()}} className={currentSection == "allNote" ? 'selected' : null}>
               <img src={noteIcon} alt="" />
               <p>Your Notes</p>
           </div>
@@ -59,26 +64,26 @@ const SideMenu = ({userCred, setUserCred, currentSection, setCurrentSection, set
                 <div className="collections">
                   {
                     allCollection.map((collection)=>(
-                      <p onClick={()=>{setCurrentSection("collections"), setEditNote(false), setCurrentCollection(collection)}}>{collection}</p>
+                      <p onClick={()=>{setCurrentSection("collections"), setEditNote(false), setCurrentCollection(collection), closeMenu()}}>{collection}</p>
                     ))
                   }
                 </div>:
                 null
               }
           </div>
-          <div onClick={()=>{setCurrentSection("reminder"), setEditNote(false), removeCollections()}} className={currentSection == "reminder"? 'selected' : null}>
+          <div onClick={()=>{setCurrentSection("reminder"), setEditNote(false), removeCollections(), closeMenu()}} className={currentSection == "reminder"? 'selected' : null}>
               <img src={alarmIcon} alt="" />
               <p>Reminder</p>
           </div>
-          <div onClick={()=>{setTagActive(true), setEditNote(false), removeCollections()}} className={currentSection == "tags"? 'selected' : null}>
+          <div onClick={()=>{setTagActive(true), setEditNote(false), removeCollections(), closeMenu()}} className={currentSection == "tags"? 'selected' : null}>
               <img src={tagIcon} alt="" />
               <p>Tags</p>
           </div>
-          <div onClick={()=>{setCurrentSection("archived"), setEditNote(false), removeCollections()}} className={currentSection == "archived"? 'selected' : null}>
+          <div onClick={()=>{setCurrentSection("archived"), setEditNote(false), removeCollections(), closeMenu()}} className={currentSection == "archived"? 'selected' : null}>
               <img src={archiveIcon} alt="" />
               <p>Archive</p>
           </div>
-          <div onClick={()=>{setCurrentSection("bin"), setEditNote(false), removeCollections()}} className={currentSection == "bin"? 'selected' : null}>
+          <div onClick={()=>{setCurrentSection("bin"), setEditNote(false), removeCollections(), closeMenu()}} className={currentSection == "bin"? 'selected' : null}>
               <img src={binIcon} alt="" />
               <p>Bin</p>
           </div>

@@ -4,6 +4,8 @@
     border-radius: 10px;
     padding: 20px;
     height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
 }
 
 .sidemenu-overall .start{
@@ -12,6 +14,14 @@
     gap: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.155);
     padding-bottom: 20px;
+}
+.sidemenu-overall .start .menu-close-icon{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 20px;
+    filter: opacity(.7);
+    display: none;
 }
 .sidemenu-overall .start img{
     width: 60px;
@@ -183,4 +193,21 @@
 }
 .sidemenu-overall .list-parent > div h6{
     transform: rotate(90deg);
+}
+
+@media (max-width: 1244px) {
+    .sidemenu-overall{
+        display: none;
+        position: fixed;
+        background: white;
+        z-index: 50;
+        left: 0;
+        top: 0;
+        width: 90%;
+        max-width: 280px;
+        height: 100vh;
+    }
+    .sidemenu-overall .start .menu-close-icon{
+        display: flex;
+    }
 }

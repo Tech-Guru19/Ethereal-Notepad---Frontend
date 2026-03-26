@@ -76,7 +76,7 @@ const SignUp = () => {
                 setBtnDisabled(false)
                 alert("successful")
                 localStorage.setItem("userCred", JSON.stringify({email, firstName}))
-                navigate("/confrimOTP")
+                navigate("/confirmOTP")
             })
             .catch((error)=>{
                 setBtnDisabled(false)

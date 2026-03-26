@@ -11,6 +11,10 @@ import EditComponent from '../Components/EditComponent'
 import Tag from '../Components/Tag'
 import AddTag from '../Components/AddTag'
 import EditTag from '../Components/EditTag'
+import menu1 from "../images/text.png"
+import menu2 from "../images/more.png"
+import logo from "../images/logo.png"
+
 
 
 const Dashboard = () => {
@@ -112,10 +116,20 @@ const Dashboard = () => {
       }
     }, [userCred])
     
+  const openMenu = () =>{
+    document.querySelector(".sidemenu-overall").style.display = "flex"
+  }
 
 
   return (
     <div className='dashboard-overall'>
+      <header className='dashboard-header'>
+        <div>
+          <img src={menu2} alt="" onClick={openMenu}/>
+          <img src={logo} alt="" />
+        </div>
+          <img src={menu1} alt="" />
+      </header>
       {preview? <Preview setPreview={setPreview} previewValue={previewValue} setPreviewValue={setPreviewValue}/> : null}
       {loading? (
         <div className="splash">

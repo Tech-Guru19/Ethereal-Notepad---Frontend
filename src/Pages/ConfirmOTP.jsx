@@ -48,7 +48,7 @@ const ConfirmOTP = () => {
       alert("OTP resent successfuly")
     })
     .catch((error)=>{
-      if (error.response.data.message) {
+      if (error?.data?.response?.message) {
         alert(error.response.data.message)
       }
     })

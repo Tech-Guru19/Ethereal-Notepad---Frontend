@@ -3,7 +3,7 @@
     height: 100%;
     width: 90%;
     display: flex;
-    z-index: 30;
+    z-index: 50;
     max-width: 320px;
     right: 0;
     top: -10px;
@@ -124,4 +124,17 @@
     overflow: hidden;
     filter: opacity(1);
     font-size: 16px;
+}
+@media (max-width: 520px) {
+    .tag-overall .head{
+        padding: 20px 15px 15px 15px !important;
+    }
+}
+@media (max-width: 1244px) {
+    .tag-overall{
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+    }
 }

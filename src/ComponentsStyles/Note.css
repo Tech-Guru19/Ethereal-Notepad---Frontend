@@ -241,3 +241,97 @@ h1{
     height: auto;
     font-size: 16px;
 }
+
+@media (max-width:1345px) {
+    .note-overall section .card-parent .card{
+        max-width: 250px;
+    }
+}
+@media (max-width: 1288px) {
+    .note-overall section .card-parent .card{
+        max-width: 230px;
+    }
+}
+@media (max-width: 1244px) {
+    .note-overall{
+        width: 100%;
+    }
+    .note-overall section .card-parent .card{
+        max-width: 230px;
+    }
+}
+@media (max-width: 1442px) {
+    .note-overall section .card-parent .card{
+        max-width: 270px;
+    }
+    .note-overall section .card-parent{
+        justify-content: center;
+    }
+}
+@media (max-width:1026px) {
+    .note-overall section .card-parent .card{
+        max-width: 250px;
+    }
+}
+@media (max-width:983px) {
+    .note-overall section .card-parent .card{
+        max-width: calc(50% - 40px);
+    }
+    .note-overall section .card-parent{
+        justify-content: start;
+    }
+}
+@media (max-width:700px) {
+    .note-overall{
+        padding: 0;
+    }
+}
+@media (max-width:600px) {
+    .note-overall section .card-parent .card{
+        max-width: calc(100% - 70px);
+    }
+    .note-overall section .card-parent{
+        justify-content: center;
+        margin-top: 0px;
+    }
+    .note-overall section{
+        min-height: calc(100vh - 210px);
+    }
+    .note-overall section .card-parent{
+        height: auto;
+        overflow: hidden;
+        padding-top: 20px;
+    }
+    .note-overall{
+        overflow: scroll;
+        height: auto;
+    }
+    body{
+        overflow-y: scroll;
+    }
+    .note-overall section .card-parent .card{
+        width: 95% !important;
+    }
+    
+}
+@media (max-width:479px) {
+    .note-overall section .card-parent .card{
+        max-width: 95%;
+    }
+}
+@media (max-width:462px) {
+    .note-overall header .updates{
+        display: none;
+    }
+    .note-overall section .options{
+        gap: 20px;
+    }
+}
+@media (max-width:343px) {
+    .note-overall section .options{
+        gap: 10px;
+    }
+    .note-overall section .options p{
+        font-size: 14px;
+    }
+}

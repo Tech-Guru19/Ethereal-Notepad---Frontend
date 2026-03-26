@@ -14,16 +14,16 @@ import saveIcon from "../images/download.png"
 
 const CreateNote = ({setEditNote, allCollection, mail, setCards}) => {
     const [optionActive, setOptionActive] = useState(false)
-    const [noteTitle, setNoteTitle] = useState(null)
-    const [noteText, setNoteText] = useState(null)
-    const [imageUrl, setImageUrl] = useState(null)
-    const [imgFile, setImgFile] = useState(null)
+    const [noteTitle, setNoteTitle] = useState("")
+    const [noteText, setNoteText] = useState("")
+    const [imageUrl, setImageUrl] = useState("")
+    const [imgFile, setImgFile] = useState("")
     const [reminder, setReminder] = useState(false)
-    const [reminderDate, setReminderDate] = useState(null)
+    const [reminderDate, setReminderDate] = useState("")
     const [category, setCategory] = useState("1")
     const [background, setBackground] = useState("rgb(135,186,245)")
-    const [dateCreated, setDateCreated] = useState(null)
-    const [collection, setCollection] = useState(null)
+    const [dateCreated, setDateCreated] = useState("")
+    const [collection, setCollection] = useState("")
     const [availabeBg, setAvailableBg] = useState(["rgb(135,186,244)", "rgb(170,135,244)", "rgb(239,134,74)", "rgb(245,116,172)", "rgb(31,28,47)"])
     const today = new Date().toISOString().split('T')[0]
 

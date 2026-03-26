@@ -3,8 +3,7 @@
     width: 100vw;
     height: 100vh;
     backdrop-filter: brightness(.5);
-    border: 2px solid red;
-    z-index: 46;
+    z-index: 55;
     left: -10px;
     top: -10px;
     display: flex;
@@ -78,4 +77,16 @@
 .addTag-overall .add-tag-container .btn-parent button:nth-child(2){
     background: black;
     color: white;
+}
+@media (max-width: 1244px) {
+    .addTag-overall{
+        position: fixed;
+        left: 0 !important;
+        top: 0;
+    }
+    .addTag-overall .add-tag-container{
+        top: -3vh;
+        width: 85%;
+        position: relative;
+    }
 }
