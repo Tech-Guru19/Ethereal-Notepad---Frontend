@@ -117,6 +117,7 @@ h1{
     border-radius: 15px;
     position: relative;
     height: 400px;
+    border: 2px solid red;
 }
 .note-overall section .card-parent .card .card-options{
     display: flex;
