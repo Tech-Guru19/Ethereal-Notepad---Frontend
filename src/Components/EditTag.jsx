@@ -31,7 +31,6 @@ const EditTag = ({setTagObj, tagObj, mail, setEditTagActive, setTags}) => {
             
         })
         .catch((error)=>{
-            console.log(error);
             alert("Error while adding tag")
             
         })

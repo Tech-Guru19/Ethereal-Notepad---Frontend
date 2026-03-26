@@ -114,13 +114,11 @@ const CreateNote = ({setEditNote, allCollection, mail, setCards}) => {
             }
         })
         .then((output)=>{
-            console.log(output);
             setCards(prev=> [...prev, output?.data?.message])
             resetNote()
             setEditNote(false)
         })
         .catch((error)=>{
-            console.log(error);
             alert("error saving note")
             
         })

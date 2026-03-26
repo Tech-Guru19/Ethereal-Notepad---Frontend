@@ -25,7 +25,6 @@ const NoteComponent = ({cards, setCards, userCred, setUserCred, currentSection, 
 
     const changeNoteCred = (id, valueToEdit, value) =>{
         setCards(prev=> prev.map((output)=>{
-            console.log(output);
             
             if (output?._id == id) {
                 return {...output, [valueToEdit]: value}

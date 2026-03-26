@@ -48,7 +48,6 @@ const Tag = ({setTagActive, setAddTagActive, tags, setTags, setTagObj, setEditTa
     })
     .catch((error)=>{
       alert("Error occured while deleting Tag")
-      console.log(error);
       
     })
   }

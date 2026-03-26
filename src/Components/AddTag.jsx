@@ -24,7 +24,6 @@ const AddTag = ({setAddTagActive, mail, setTags}) => {
             setAddTagActive(false)
         })
         .catch((error)=>{
-            console.log(error);
             alert("Error while adding tag")
             
         })

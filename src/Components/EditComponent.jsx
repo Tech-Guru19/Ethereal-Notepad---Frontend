@@ -91,8 +91,6 @@ const EditComponent = ({setEditNote, allCollection, mail, editObj, setCards}) =>
             alert("Note text is required")
             return
         }
-        console.log(editObj?._id);
-        
         const form = new FormData()
         form.append("id", editObj?._id)
         form.append("mail", mail)
@@ -132,7 +130,6 @@ const EditComponent = ({setEditNote, allCollection, mail, editObj, setCards}) =>
             setEditNote(false)
         })
         .catch((error)=>{
-            console.log(error);
             alert("error saving note")
             
         })

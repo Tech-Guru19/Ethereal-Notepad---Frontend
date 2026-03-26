@@ -47,7 +47,6 @@ const Dashboard = () => {
       let holdCollection = []
       cards.map((output)=>{
         if (output?.collection && output?.collection != "undefined") {
-          console.log(output?.collection);
           
           const filterCOllection = holdCollection.filter(col=> col != output?.collection)
           filterCOllection.push(output?.collection)
@@ -83,13 +82,11 @@ const Dashboard = () => {
                 mail: userCred.email
               })
               .then((allTags)=>{
-                console.log(allTags?.data?.message);
                 
                 setTags(allTags?.data?.message)
               })
               .catch((error)=>{
                 alert("Error fetching Tags")
-                console.log(error);
                 
               })
             })
