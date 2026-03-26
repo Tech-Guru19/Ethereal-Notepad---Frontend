@@ -315,7 +315,26 @@
     } 
 }
 @media (max-width:828px) {
-    .create-note-overall .sec{
+    .create-note-overall{
+        height: 100%;
+        overflow-y: scroll;
+    }
+    .create-note-overall section{
         flex-direction: column;
+        height: 100%;
+        overflow-y: scroll;
+        align-items: center;
+        gap: 10px;
+    }
+    .create-note-overall section .template{
+        margin: 0;
+    }
+    .create-note-overall section .card{
+        height: 400px;
+        margin: 0;
+    }
+    .create-note-overall section .template{
+        overflow-y: auto;
+        
     }
 }
