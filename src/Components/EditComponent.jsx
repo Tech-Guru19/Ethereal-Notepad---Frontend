@@ -189,7 +189,7 @@ const EditComponent = ({setEditNote, allCollection, mail, editObj, setCards}) =>
                 <div className="last-option">
                     <div>
                         <p>Upload Image</p>
-                         <input type="file" onChange={(e)=>{handleImg(e)}} name="image" accept='images/*' id="image" />
+                         <input type="file" onChange={(e)=>{handleImg(e)}} name="image" accept='image/*' id="image" />
                     </div>
                     <div>
                         <p>Select Background</p>
