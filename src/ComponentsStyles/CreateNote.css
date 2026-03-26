@@ -295,7 +295,7 @@
     justify-content: space-between;
     width: calc(100% - 30px);
     position: absolute;
-    bottom: -15px;
+    top: 400px;
 }
 .create-note-overall section .card .date-parent > div{
     display: flex;
