@@ -105,7 +105,6 @@ const NoteComponent = ({cards, setCards, userCred, setUserCred, currentSection, 
 
     const closeMenu = () =>{
         if (window.innerWidth <= 1244) {
-            alert("here")
             document.querySelector(".sidemenu-overall").style.display = "none"
         }
     }
