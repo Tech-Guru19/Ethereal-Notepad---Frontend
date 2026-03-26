@@ -125,6 +125,7 @@
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 .create-note-overall section .template .category-icon img{
     width: 32px;
@@ -167,6 +168,7 @@
     display: flex;
     gap: 8px;
     margin-top: 3px;
+    flex-wrap: wrap;
 }
 .create-note-overall section .template .last-option .background-parent .bg{
     width: 30px;
@@ -313,6 +315,9 @@
     .create-note-overall{
         width: 100%;
     } 
+    .create-note-overall section{
+        height: calc(100% - 200px);
+    }
 }
 @media (max-width:828px) {
     .create-note-overall{
@@ -321,25 +326,61 @@
     }
     .create-note-overall section{
         flex-direction: column;
-        height: 100%;
         overflow-y: scroll;
         align-items: center;
         gap: 10px;
+        height: auto !important;
+        overflow: scroll;
     }
     .create-note-overall section .template{
         margin: 0;
+        overflow: auto;
     }
     .create-note-overall section .card{
         height: 400px;
         margin: 0;
     }
-    .create-note-overall section .template{
-        overflow-y: auto;
-        
+    body{
+        overflow-y: scroll;
+        overflow-x: hidden !important;
     }
 }
 @media (max-width: 600px) {
     .create-note-overall header .updates{
         display: none !important;
+    }
+    .create-note-overall{
+        padding-right: 0;
+    }
+}
+@media (max-width: 660px) {
+    .create-note-overall section .last-option{
+        gap: 10px !important;
+    }
+    .create-note-overall .card{
+        max-width: 85% !important;
+    }
+    .create-note-overall section .last-option input{
+        width: 91px;
+    }
+}
+@media (max-width: 435px) {
+    .create-note-overall section .last-option{
+        flex-direction: column;
+    }
+    .create-note-overall section .last-option input{
+        width: 85%;
+        max-width: 200px;
+    }
+}
+@media (max-width: 400px) {
+    .create-note-overall section{
+        overflow: hidden;
+    }
+}
+@media (max-width: 321px) {
+    .create-note-overall section{
+        padding: 10px !important;
+        width: calc(100% - 20px);
     }
 }

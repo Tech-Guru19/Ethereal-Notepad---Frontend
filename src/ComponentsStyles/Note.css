@@ -264,8 +264,10 @@ h1{
     .note-overall section .card-parent .card{
         max-width: 270px;
     }
-    .note-overall section .card-parent{
-        justify-content: center;
+}
+@media (max-width: 1346px) {
+    .note-overall section .card-parent .card{
+        max-width: calc(50% - 40px);
     }
 }
 @media (max-width:1026px) {
@@ -273,13 +275,19 @@ h1{
         max-width: 250px;
     }
 }
+@media (max-width:1056px) {
+    .note-overall section .card-parent{
+        justify-content: start;
+    }
+    .note-overall section .card-parent .card{
+        max-width: calc(50% - 40px);
+    }
+}
 @media (max-width:983px) {
     .note-overall section .card-parent .card{
         max-width: calc(50% - 40px);
     }
-    .note-overall section .card-parent{
-        justify-content: start;
-    }
+    
 }
 @media (max-width:700px) {
     .note-overall{

@@ -59,7 +59,8 @@
 .dashboard-overall .splash img{
    max-width: 250px;
    width: 95%;
-   top: -15vh;
+   top: -8vh;
+   position: relative;
 }
 @media (max-width:520px) {
     .dashboard-overall{
