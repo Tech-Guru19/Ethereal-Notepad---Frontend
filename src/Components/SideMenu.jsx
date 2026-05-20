@@ -23,7 +23,9 @@ const SideMenu = ({userCred, setUserCred, currentSection, setCurrentSection, set
     setCollectionOption(false)
   }
   const closeMenu = () =>{
-    document.querySelector(".sidemenu-overall").style.display = "none"
+      if (window.innerWidth <= 1244) {
+          document.querySelector(".sidemenu-overall").style.display = "none"
+      }
   }
 
   return (

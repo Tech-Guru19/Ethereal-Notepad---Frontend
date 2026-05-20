@@ -56,7 +56,7 @@ const NoteComponent = ({cards, setCards, userCred, setUserCred, currentSection, 
         }
     }
 
-    const closeOption = (e) =>{
+    const closeOption = () =>{
         if (optionActive) {
             document.querySelectorAll(`.card-options`).forEach((cardOption)=>{
                 cardOption.style.display = "none"
